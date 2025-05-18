@@ -4,6 +4,7 @@ from datetime import datetime
 class Loan:
 
     def __init__(self, user_id: int, book_id: int):
+        self.id: int = -1
         self.user_id = user_id
         self.book_id = book_id
         self.loan_date = datetime.now()
