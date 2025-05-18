@@ -8,9 +8,12 @@ class MemoryBookRepositorie(IBookRepository):
     
     def __init__(self):
         self.__books: list[Book] = []
+        self.__current_id = 1
 
     def add(self, book: Book):
+        book.id = self.__current_id
         self.__books.append(book)
+        self.__current_id += 1
     
     def find_by_id(self, book_id: int) -> Optional[Book]:
         book_found = None

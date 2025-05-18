@@ -34,5 +34,12 @@ class MemoryLoanRepository(ILoanRepository):
 
         return loan_found
 
+
+    def delete_loan(self, loan_id: int):
+        for index, loan in enumerate(self.loans):
+            if loan.id == loan_id:
+                del self.loans[index]
+                break
+
     def list_all(self) -> List[Loan]:
         return self.loans.copy()

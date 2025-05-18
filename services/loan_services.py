@@ -44,6 +44,7 @@ class LoanService:
         book = self.__book_repositorie.find_by_id(loan.book_id)
         if book:
             book.is_available = True
+            self.__loan_repositorie.delete_loan(loan_id)
 
 
     def list_loans(self):

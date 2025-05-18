@@ -4,7 +4,7 @@ from models.user import User
 from repositories.user_repositorie import IUserRepository
 
 
-class BookService:
+class UserService:
 
     def __init__(self, user_repositorie: IUserRepository):
         self.__user_repositorie = user_repositorie

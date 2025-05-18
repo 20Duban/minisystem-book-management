@@ -16,6 +16,10 @@ class ILoanRepository(ABC):
     @abstractmethod
     def find_active_loan_by_book(self, book_id: int) -> Loan:
         pass
+    
+    @abstractmethod
+    def delete_loan(self, loan_id: int):
+        pass
 
     @abstractmethod
     def list_all(self) -> list[Loan]:
